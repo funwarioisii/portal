@@ -9,7 +9,7 @@ export default {
   name: "home",
   data() {
     return {
-      message: "Dashboard of Kazuyuki Hashimoto"
+      message: "Dashboard"
     }
   }
 }

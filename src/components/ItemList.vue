@@ -12,7 +12,10 @@ export default {
   name: "itemlist",
   data() {
     return {
-      game1: "カタン"
+      game1: "カタン",
+      games: [
+        {"title": ""}
+      ]
     }
   }
 }

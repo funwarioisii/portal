@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <Home />
-    <button @click="transPage('itemList')">Board Game</button>
-    <button @click="transPage('calc')">Tensor Flow</button>
+    <v-app>
+      <Home />
+      <v-flex>
+        <v-btn color="info" @click="transPage('itemList')">Board Game</v-btn>
+        <v-btn color="warning" @click="transPage('calc')">Tensor Flow</v-btn>
+        <v-btn color="success">Octo</v-btn>
+        <component :is="currentPage"></component>
 
-    <component :is="currentPage"></component>
+      </v-flex>
+    </v-app>
   </div>
 </template>
 
@@ -13,7 +18,6 @@
 import Home from "./components/Home.vue"
 import ItemList from "./components/ItemList.vue"
 import Calc from "./components/Calc.vue"
-
 
 export default {
   name: 'app',
