@@ -2,7 +2,10 @@
   <div id="ItemList">
     <h2>Board games</h2>
     <div class="gameList" v-for="(game, index) in games" :key="index">
-      <p class="gameTitle">{{ displayTitle(game) }}</p>
+      <v-card class="elevation-2">
+        <v-card-title class="headline">{{game.name}}</v-card-title>
+        <v-card-text>{{game.rental.place}}, {{game.rental.status}}</v-card-text>
+      </v-card>
     </div>
   </div>
 </template>

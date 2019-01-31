@@ -5,7 +5,7 @@
       <v-flex>
         <v-btn color="info" @click="transPage('itemList')">Board Game</v-btn>
         <v-btn color="warning" @click="transPage('calc')">Tensor Flow</v-btn>
-        <v-btn color="success">Octo</v-btn>
+        <v-btn color="info" @click="transPage('history')">History</v-btn>
         <component :is="currentPage"></component>
 
       </v-flex>
@@ -18,6 +18,7 @@
 import Home from "./components/Home.vue"
 import ItemList from "./components/ItemList.vue"
 import Calc from "./components/Calc.vue"
+import History from "./components/History.vue"
 
 export default {
   name: 'app',
@@ -32,6 +33,8 @@ export default {
         this.currentPage = ItemList
       } else if (title === "calc") {
         this.currentPage = Calc
+      } else if (title === "history") {
+        this.currentPage = History
       }
     }
   },
