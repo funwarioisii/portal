@@ -17,6 +17,6 @@ action "Build" {
 action "Deploy" {
   uses = "docker://node:10"
   needs = ["Build"]
-  args = "[\"bash\", \"-c\", \"yarn firebase deploy --token $FIREBASE_TOKEN\"]"
+  args = ["bash", "-c", "yarn firebase deploy --token $FIREBASE_TOKEN"]"
   secrets = ["FIREBASE_TOKEN"]
 }
