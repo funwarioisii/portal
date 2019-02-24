@@ -1,21 +1,16 @@
 <script>
-import { Bar } from 'vue-chartjs'
-import { log } from '@tensorflow/tfjs';
+import { Line } from 'vue-chartjs'
+
 
 export default {
-  extends: Bar,
+  extends: Line,
   mounted () {
     this.fetchFirebase()
       .then((d) => {
-        console.log('chartdata', d[0])
-        console.log('labels', d[1])
         this.chartdata.datacollection.datasets[0].data = d[0]
         this.chartdata.datacollection.labels = d[1]
       })
       .then(() => {
-        console.log('mounted')
-        console.log('chartdata', this.chartdata.datacollection.datasets[0].data)
-        console.log('labels', this.chartdata.datacollection.labels)
         this.renderChart(this.chartdata.datacollection, this.options)
       })
   },
@@ -66,6 +61,3 @@ export default {
 
 
 </script>
-
-<style>
-</style>
