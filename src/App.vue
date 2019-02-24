@@ -7,6 +7,7 @@
         <v-btn color="warning" @click="transPage('calc')">Tensor Flow</v-btn>
         <v-btn color="info" @click="transPage('history')">History</v-btn>
         <v-btn color="warning" @click="transPage('graph')">Graph</v-btn>
+        <v-btn color="info" @click="transPage('catan')">catan</v-btn>
         <component :is="currentPage"></component>
 
       </v-flex>
@@ -21,6 +22,7 @@ import ItemList from "./components/ItemList.vue"
 import Calc from "./components/Calc.vue"
 import History from "./components/History.vue"
 import Graph from "./components/Graph.vue"
+import Catan from "./components/Catan.vue"
 
 export default {
   name: 'app',
@@ -40,6 +42,8 @@ export default {
         this.currentPage = History
       } else if (title === "graph") {
         this.currentPage = Graph
+      } else if (title === 'catan') {
+        this.currentPage = Catan
       }
     }
   },
