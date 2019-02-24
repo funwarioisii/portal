@@ -5,10 +5,14 @@
       <button>{{index}} : {{count}}</button>
     </div>
     <div class="history" v-for="(item) in history" :key="item">{{item}}</div>
+    <GraphTemplate :chartdata="chartdata"/>
   </div>
 </template>
 
 <script>
+import GraphTemplate from "./GraphTemplate.vue"
+
+
 export default {
   data() {
     return {
@@ -28,7 +32,23 @@ export default {
             11: 0,
             12: 0
       },
-      history: []
+      history: [],
+      chartdata: {
+        datacollection: {
+          labels: ["Red", "Blue", "Yello"],
+          datasets: [
+            {
+              label: 'Data One',
+              backgroundColor: '#f87979',
+              data: [1, 2, 3, 4]
+            }
+          ]
+        }
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
     }
   },
   methods: {
@@ -36,6 +56,9 @@ export default {
       this.diceCount[index] += 1
       this.history.push(index)
     }
+  },
+  components: {
+    GraphTemplate: GraphTemplate
   }
 }
 </script>
