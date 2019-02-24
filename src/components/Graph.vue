@@ -4,15 +4,6 @@ import { Line } from 'vue-chartjs'
 
 export default {
   extends: Line,
-<<<<<<< HEAD
-  props: ['chartdata', 'options'],
-
-  mounted() {
-    this.renderChart(
-      chartdata,
-      options
-    )
-=======
   mounted () {
     this.fetchFirebase()
       .then((d) => {
@@ -65,7 +56,6 @@ export default {
         })
       })
     }
->>>>>>> adf3cd8fe799cc1a06c84cb590f313f1b4d4065a
   }
 }
 
