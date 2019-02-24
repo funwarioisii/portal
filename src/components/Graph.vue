@@ -16,7 +16,6 @@ export default {
   },
   data: function() {
     return {
-      lights: [{time: 0, value: 0}],
       chartdata: {
         datacollection: {
           labels: [],
