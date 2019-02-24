@@ -4,9 +4,6 @@ import { Line } from 'vue-chartjs'
 
 export default {
   extends: Line,
-  beforeCreate: function(){
-    
-  },
 
   mounted() {
     let chartdata = {
