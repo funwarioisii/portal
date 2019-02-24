@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
 
- 
+
 Vue.use(Vuetify, {
   theme: {
     primary: colors.red.darken1, // #E53935
@@ -16,5 +17,6 @@ Vue.use(Vuetify, {
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
