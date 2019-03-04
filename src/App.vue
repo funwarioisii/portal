@@ -6,11 +6,14 @@
         <v-btn color="warning" @click="transPage('calc')">Tensor Flow</v-btn>
         <v-btn color="info" @click="transPage('history')">History</v-btn>
         <v-btn color="warning" @click="transPage('sensor')">Sensor</v-btn>
-        <v-btn color="info" @click="transPage('catan')">catan</v-btn>
+        <router-link to="/catan">
+          <v-btn color="info">catan</v-btn>
+        </router-link>
         <router-link to="/graph">
           <v-btn color="warning">Graph</v-btn>
         </router-link>
-        <component :is="currentPage"></component>
+
+        <!-- <component :is="currentPage"></component> -->
         <router-view></router-view>
       </v-flex>
     </v-app>
