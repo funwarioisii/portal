@@ -2,10 +2,15 @@
   <div id="app">
     <v-app>
       <v-flex>
-        <v-btn color="info" @click="transPage('itemList')">Board Game</v-btn>
-        <v-btn color="warning" @click="transPage('calc')">Tensor Flow</v-btn>
-        <v-btn color="info" @click="transPage('history')">History</v-btn>
-        <v-btn color="warning" @click="transPage('sensor')">Sensor</v-btn>
+        <router-link to="/games">
+          <v-btn color="info">Board Game</v-btn>
+        </router-link>
+        <router-link to="/tf">
+          <v-btn color="warning">Tensor Flow</v-btn>
+        </router-link>
+        <router-link to="/sensor">
+          <v-btn color="warning">Sensor</v-btn>
+        </router-link>
         <router-link to="/catan">
           <v-btn color="info">catan</v-btn>
         </router-link>

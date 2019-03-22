@@ -1,10 +1,19 @@
 <template>
-  
+  <div>
+    <Calc></Calc>
+  </div>
 </template>
 
 <script>
+  import Calc from '../components/Calc'
+
   export default {
-    name: "tensor-screen"
+    components : {
+      Calc
+    },
+    data () {
+      
+    }
   }
 </script>
 
